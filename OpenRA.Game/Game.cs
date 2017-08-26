@@ -54,7 +54,7 @@ namespace OpenRA
 		public static bool HasInputFocus = false;
 
 		public static bool BenchmarkMode = false;
-
+		
 		public static GlobalChat GlobalChat;
 
 		public static string EngineVersion { get; private set; }

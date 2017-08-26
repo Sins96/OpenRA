@@ -27,7 +27,6 @@ namespace OpenRA
 			if (ex == null)
 				return e.Message;
 
-			////Return different messages depends on the type of exception catched
 			switch (ex.Status)
 			{
 				case WebExceptionStatus.RequestCanceled:
@@ -44,6 +43,7 @@ namespace OpenRA
 					return ex.Message;
 			}
 		}
+		
 
 		public Download(string url, string path, Action<DownloadProgressChangedEventArgs> onProgress, Action<AsyncCompletedEventArgs> onComplete)
 		{
