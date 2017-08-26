@@ -44,7 +44,6 @@ namespace OpenRA
 			}
 		}
 		
-
 		public Download(string url, string path, Action<DownloadProgressChangedEventArgs> onProgress, Action<AsyncCompletedEventArgs> onComplete)
 		{
 			lock (syncObject)
