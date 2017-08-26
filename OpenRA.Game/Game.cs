@@ -48,15 +48,11 @@ namespace OpenRA
 		static Server.Server server;
 
 		public static MersenneTwister CosmeticRandom = new MersenneTwister(); // not synced
-
 		public static Renderer Renderer;
 		public static Sound Sound;
 		public static bool HasInputFocus = false;
-
 		public static bool BenchmarkMode = false;
-		
 		public static GlobalChat GlobalChat;
-
 		public static string EngineVersion { get; private set; }
 
 		static Task discoverNat;
