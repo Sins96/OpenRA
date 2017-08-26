@@ -1,7 +1,7 @@
 # Travis-CI Build for OpenRA
 # see travis-ci.org for details
 
-language: csharp
+language: c#
 mono: 5.2.0
 
 # http://docs.travis-ci.com/user/migrating-from-legacy
