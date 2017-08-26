@@ -4,8 +4,7 @@
 language: csharp
 mono: 5.2.0
 
-# http://docs.travis-ci.com/user/migrating-from-legacy
-sudo: true
+sudo: false
 
 cache:
   directories:
@@ -83,4 +82,4 @@ deploy:
   on:
     all_branches: true
     tags: true
-    repo: OpenRA/OpenRA
+    repo: Sins96/OpenRA

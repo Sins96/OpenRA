@@ -22,10 +22,11 @@ namespace OpenRA
 
 		public static string FormatErrorMessage(Exception e)
 		{
+			////Catching the exception
 			var ex = e as WebException;
 			if (ex == null)
 				return e.Message;
-		
+
 			switch (ex.Status)
 			{
 				case WebExceptionStatus.RequestCanceled:
@@ -42,8 +43,6 @@ namespace OpenRA
 					return ex.Message;
 			}
 		}
-		
-
 		public Download(string url, string path, Action<DownloadProgressChangedEventArgs> onProgress, Action<AsyncCompletedEventArgs> onComplete)
 		{
 			lock (syncObject)
