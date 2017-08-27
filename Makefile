@@ -165,31 +165,31 @@ check-scripts:
 
 check: utility stylecheck mods
 	@echo
-	@echo "Checking for explicit interface violations..."
+	@echo "Checking for explicit interface violations (LOADING)..."
 	@mono --debug OpenRA.Utility.exe all --check-explicit-interfaces
 	@echo
-	@echo "Checking for code style violations in OpenRA.Game..."
+	@echo "Checking for code style violations in OpenRA.Game (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Game
 	@echo
-	@echo "Checking for code style violations in OpenRA.Platforms.Default..."
+	@echo "Checking for code style violations in OpenRA.Platforms.Default (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Platforms.Default
 	@echo
-	@echo "Checking for code style violations in OpenRA.Mods.Common..."
+	@echo "Checking for code style violations in OpenRA.Mods.Common (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Mods.Common
 	@echo
-	@echo "Checking for code style violations in OpenRA.Mods.Cnc..."
+	@echo "Checking for code style violations in OpenRA.Mods.Cnc (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Mods.Cnc
 	@echo
-	@echo "Checking for code style violations in OpenRA.Mods.D2k..."
+	@echo "Checking for code style violations in OpenRA.Mods.D2k (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Mods.D2k
 	@echo
-	@echo "Checking for code style violations in OpenRA.Utility..."
+	@echo "Checking for code style violations in OpenRA.Utility (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Utility
 	@echo
-	@echo "Checking for code style violations in OpenRA.Test..."
+	@echo "Checking for code style violations in OpenRA.Test (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Test
 	@echo
-	@echo "Checking for code style violations in OpenRA.Server..."
+	@echo "Checking for code style violations in OpenRA.Server (LOADING)..."
 	@mono --debug OpenRA.StyleCheck.exe OpenRA.Server
 
 NUNIT_CONSOLE := $(shell test -f thirdparty/download/nunit3-console.exe && echo mono thirdparty/download/nunit3-console.exe || \
