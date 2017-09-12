@@ -48,15 +48,11 @@ namespace OpenRA
 		static Server.Server server;
 
 		public static MersenneTwister CosmeticRandom = new MersenneTwister(); // not synced
-
 		public static Renderer Renderer;
 		public static Sound Sound;
 		public static bool HasInputFocus = false;
-
 		public static bool BenchmarkMode = false;
-		
 		public static GlobalChat GlobalChat;
-
 		public static string EngineVersion { get; private set; }
 
 		static Task discoverNat;
@@ -208,6 +204,7 @@ namespace OpenRA
 				CreateAndStartLocalServer(lobbyInfo.GlobalSettings.Map, orders);
 		}
 
+		// Create the local server and start it
 		public static void CreateAndStartLocalServer(string mapUID, IEnumerable<Order> setupOrders)
 		{
 			OrderManager om = null;
@@ -225,6 +222,7 @@ namespace OpenRA
 			om = JoinServer(IPAddress.Loopback.ToString(), CreateLocalServer(mapUID), "");
 		}
 
+		// Determine whether the client is host or not in the lobby
 		public static bool IsHost
 		{
 			get
@@ -840,6 +838,7 @@ namespace OpenRA
 			JoinLocal();
 		}
 
+		// Shutdown and stop the current server
 		public static void CloseServer()
 		{
 			if (server != null)
